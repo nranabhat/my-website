@@ -129,8 +129,7 @@ body {
 .project-links {
     display: flex;
     gap: 1rem;
-    margin-top: auto; /* This will push the links to the bottom */
-    margin: 0rem 0;
+    margin: 2rem 0;
     justify-content: flex-start;
 }
 
@@ -139,6 +138,7 @@ body {
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
     background: var(--entry);
     border: 1px solid var(--border);
     border-radius: 6px;
