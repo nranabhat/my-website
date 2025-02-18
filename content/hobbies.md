@@ -3,7 +3,8 @@ title: "Hobbies"
 draft: false
 ShowToc: false
 url: "/hobbies/"
---- 
+---
+
 When I'm not coding or building things, you can usually find me throwing discs, climbing rocks, or sliding down mountains!* 🏃‍♂️🧗‍♂️🏂
 
 ### Rock Climbing 
