@@ -1,0 +1,64 @@
+{{- define "main" }}
+
+<article class="post-single">
+    <header class="post-header">
+        {{ partial "breadcrumbs.html" . }}
+        <h1 class="post-title">
+            {{ .Title }}
+            {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+        </h1>
+        {{- if .Description }}
+        <div class="post-description">
+            {{ .Description }}
+        </div>
+        {{- end }}
+    </header>
+
+    <div class="post-content-wrapper">
+        {{- if (.Param "ShowToc") }}
+        <aside class="toc-side">
+            <div class="toc-side-content">
+                <details open>
+                    <summary>
+                        <span class="details">{{ i18n "toc" | default "Table of Contents" }}</span>
+                    </summary>
+                    <div class="inner">
+                        {{- .TableOfContents -}}
+                    </div>
+                </details>
+            </div>
+        </aside>
+        {{- end }}
+
+        <div class="post-content">
+            {{- .Content }}
+        </div>
+    </div>
+
+    {{- if .Params.ShowPostNavLinks | default (.Site.Params.ShowPostNavLinks | default true) }}
+    {{- partial "post_nav_links.html" . }}
+    {{- end }}
+</article>
+
+{{- if (.Param "ShowToc") }}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const id = entry.target.getAttribute('id');
+            if (entry.intersectionRatio > 0) {
+                document.querySelector(`nav li a[href="#${id}"]`)?.classList.add('active');
+            } else {
+                document.querySelector(`nav li a[href="#${id}"]`)?.classList.remove('active');
+            }
+        });
+    }, { rootMargin: '-20% 0px -35% 0px' });
+
+    // Track all headers that have an `id` applied
+    document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').forEach((header) => {
+        observer.observe(header);
+    });
+});
+</script>
+{{- end }}
+{{- end }} 

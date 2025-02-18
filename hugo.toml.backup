@@ -1,0 +1,8 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Your Site Title'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = "auto"  # can be "light", "dark" or "auto"
+  # Other params...

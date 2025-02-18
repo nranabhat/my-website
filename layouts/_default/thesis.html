@@ -1,0 +1,11 @@
+{{- define "main" }}
+<article class="post-single">
+    {{- if .Params.ShowBreadCrumbs | default (.Site.Params.ShowBreadCrumbs | default true) }}
+    {{- partial "breadcrumbs.html" . }}
+    {{- end }}
+
+    <div class="pdf-container">
+        <iframe src="/thesis.pdf" width="100%" height="800px" style="border: none;"></iframe>
+    </div>
+</article>
+{{- end }} 

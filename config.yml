@@ -1,0 +1,93 @@
+baseURL: "http://example.org/"
+title: "Nico Ranabhat"
+theme: "PaperMod"
+languageCode: "en-us"
+pagination:
+  pagerSize: 5
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: Nico Ranabhat
+  description: "Personal website and blog"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Nico Ranabhat
+  # author: ["Me", "You"] # multiple authors
+  images: ["<link or path of image for opengraph>"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  ShowToc: true
+  TocOpen: true
+
+  profileMode:
+    enabled: true   # Enable profile mode for homepage
+    title: "👋 Hi, I'm Nico"
+    subtitle: "I like to build things"
+    imageUrl: "images/coder_skater.gif"    # Optional: add a profile image
+    imageTitle: ""  # Optional: image alt text
+    buttons:
+      - name: About
+        url: /about/
+      - name: Resume
+        url: /resume/
+      - name: Projects
+        url: /projects
+      - name: Hobbies
+        url: /hobbies
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/nranabhat/"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/nranabhat/"
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: resume
+      name: Resume
+      url: /resume/
+      weight: 20
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 30
+    - identifier: hobbies
+      name: Hobbies
+      url: /hobbies/
+      weight: 40
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
