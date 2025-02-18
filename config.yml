@@ -1,4 +1,4 @@
-baseURL: "https://my-website-pi-two.vercel.app/"
+baseURL: "https://nicoranabhat.xyz/"
 title: "Nico Ranabhat"
 theme: "PaperMod"
 languageCode: "en-us"
@@ -45,17 +45,17 @@ params:
   profileMode:
     enabled: true   # Enable profile mode for homepage
     title: "👋 Hi, I'm Nico"
-    subtitle: "I like to build things"
+    subtitle: "I like to build things and play outside"
     imageUrl: "images/coder_skater.gif"    # Optional: add a profile image
     imageTitle: ""  # Optional: image alt text
     buttons:
-      - name: About
+      - name: about
         url: /about/
-      - name: Resume
+      - name: resume
         url: /resume/
-      - name: Projects
+      - name: projects
         url: /projects
-      - name: Hobbies
+      - name: hobbies
         url: /hobbies
 
   socialIcons:
