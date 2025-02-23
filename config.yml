@@ -64,6 +64,10 @@ params:
     - name: linkedin
       url: "https://www.linkedin.com/in/nranabhat/"
 
+  # Add this new section for analytics
+  analytics:
+    vercel: true
+
 menu:
   main:
     - identifier: about
