@@ -1,3 +1,7 @@
 {{ if .IsHome }}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-{{ end }} 
+{{ end }}
+
+{{- /* Head custom content area start */ -}}
+{{- partial "analytics.html" . }}
+{{- /* Head custom content area end */ -}} 
